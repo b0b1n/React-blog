@@ -5,7 +5,8 @@ const Home = () => {
   const [blogs, setBlogs] = useState([
     {
       id: 1,
-      title:"sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      title:
+        "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
       author: "Sohaib",
       body: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
     },
@@ -29,11 +30,14 @@ const Home = () => {
     },
   ]);
 
+  const handleDelete = (id) => {
+    const newBlogs = blogs.filter(blog => blog.id !== id);
+    setBlogs(newBlogs);
+  };
 
   return (
     <div className="home">
-        <BlogList blogs={blogs} title="All blogs"/>
-        <BlogList blogs={blogs.filter((e)=> e.author === "Sohaib")} title="Sohaib's blogs"/>
+      <BlogList blogs={blogs} title="All blogs" handleDelete={handleDelete} />
     </div>
   );
 };
