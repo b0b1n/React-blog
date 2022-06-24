@@ -33,3 +33,7 @@
   margin: 40px auto;
   padding: 20px;
 }
+
+.home > * {
+  margin: 20px;
+}
