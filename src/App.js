@@ -1,22 +1,14 @@
 import "./App.css";
+import Navbar from "./Navbar";
+import Home from "./Home";
 
 function App() {
-  const title = "Welcome to the new blog";
-  const likes = 50;
-  const link = "www.google.com";
-  const person = { fullName: "Sohaib Skious", age: 21 };
-
+  
   return (
     <div className="App">
+      <Navbar />
       <div className="content">
-        <h1>{title}</h1>
-        <p>Liked {likes} times</p>
-
-        {/* <p>{console.log("234")}</p> */}
-        {/* <p>{person}</p> */}
-        <p>Random number : {Math.random() * 100}</p>
-        <a href={link} > Google Site</a>
-
+        <Home />
       </div>
     </div>
   );
