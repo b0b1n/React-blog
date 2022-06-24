@@ -68,3 +68,8 @@
   border-radius: 5px;
   float: right;
 }
+.blog-preview button:hover{
+  background-color: #e00909;
+  border: 1px solid #fafafa;
+  color:#fafafa;
+}
