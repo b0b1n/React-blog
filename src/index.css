@@ -128,3 +128,45 @@ text-decoration: none;}
   cursor: pointer;
 
 } */
+
+/** Blog creation form **/
+
+.create {
+  border-radius: 15px;
+  padding: 10px 30px ;
+  box-shadow: 3px 5px 5px 5px rgba(165, 165, 165, 0.1);
+  text-align: center;
+}
+.create form > *{
+  margin-top: 10px;
+}
+
+.create h2{
+  margin: 10px 0;
+  color: #357af1;
+  font-size: 20px;
+}
+
+.create label{
+  text-align: left;
+  display: block;
+}
+
+.create input, .create textarea , .create select{
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+
+.create button{
+  background: #31caac;
+  color: #fbfbfb;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  margin-top: 5px;
+  cursor: pointer;
+}
