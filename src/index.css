@@ -45,7 +45,6 @@
   border: 1px solid lightblue;
   border-radius: 10px;
   border-bottom: 1px solid #fafafa;
-
 }
 .blog-preview:hover {
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
@@ -57,24 +56,25 @@
   text-align: center;
 }
 
-.blog-preview p{
-  margin-top:5%;
+.blog-preview p {
+  margin-top: 5%;
 }
 
-.blog-preview button{
-  padding: 8px 14px ;
+.blog-preview button {
+  padding: 8px 14px;
   background-color: #fb6a6a;
   border: 1px solid lightblue;
   border-radius: 5px;
   float: right;
 }
-.blog-preview button:hover{
+.blog-preview button:hover {
   background-color: #e00909;
   border: 1px solid #fafafa;
-  color:#fafafa;
+  color: #fafafa;
 }
-.blog-preview a{
-text-decoration: none;}
+.blog-preview a {
+  text-decoration: none;
+}
 /* Loading */
 #loading-container {
   margin-top: 20vh;
@@ -84,10 +84,10 @@ text-decoration: none;}
 
 /*Error */
 
-.error{
+.error {
   color: rgb(255, 255, 255);
   background-color: #fb9d9d;
-  border: 1px solid ;
+  border: 1px solid;
   padding: 20px 10px;
   font-weight: bold;
   border-radius: 15px;
@@ -95,7 +95,7 @@ text-decoration: none;}
 
 /* blog details page */
 
-.blog-details h2{
+.blog-details h2 {
   text-align: center;
   font-size: 20px;
   color: #346bc9;
@@ -106,54 +106,53 @@ text-decoration: none;}
   margin-right: 2%;
 }
 
-.blog-details article{
+.blog-details article {
   border-radius: 15px;
-  padding: 10px 30px ;
+  padding: 10px 30px;
   box-shadow: 3px 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 
-.blog-details div{
+.blog-details div {
   margin: 30px 0;
   text-align: justify;
-  text-justify:inter-word;
+  text-justify: inter-word;
 }
 
-.blog-details button{
-
+.blog-details button {
   background: #e00909;
   color: #f2f2f2;
   border: 0;
   padding: 8px 14px;
-  border-radius: 8px ;
+  border-radius: 8px;
   cursor: pointer;
-  
-
 }
 
 /** Blog creation form **/
 
 .create {
   border-radius: 15px;
-  padding: 10px 30px ;
+  padding: 10px 30px;
   box-shadow: 3px 5px 5px 5px rgba(165, 165, 165, 0.1);
   text-align: center;
 }
-.create form > *{
+.create form > * {
   margin-top: 10px;
 }
 
-.create h2{
+.create h2 {
   margin: 10px 0;
   color: #357af1;
   font-size: 20px;
 }
 
-.create label{
+.create label {
   text-align: left;
   display: block;
 }
 
-.create input, .create textarea , .create select{
+.create input,
+.create textarea,
+.create select {
   width: 100%;
   padding: 6px 10px;
   margin: 10px 0;
@@ -162,7 +161,7 @@ text-decoration: none;}
   display: block;
 }
 
-.create button{
+.create button {
   background: #31caac;
   color: #fbfbfb;
   border: 0;
@@ -172,7 +171,20 @@ text-decoration: none;}
   cursor: pointer;
 }
 
-.create button:disabled{
+.create button:disabled {
   background: rgb(246, 163, 163);
   color: rgb(65, 39, 39);
+}
+
+/** Not found **/
+.not-found {
+  text-align: center;
+}
+.not-found  * {
+  margin: 15px;
+}
+.not-found a {
+  text-decoration: none;
+  color: #31caac;
+  font-weight: 900;
 }
