@@ -118,16 +118,17 @@ text-decoration: none;}
   text-justify:inter-word;
 }
 
-/* .blog-details button{
+.blog-details button{
 
   background: #e00909;
   color: #f2f2f2;
   border: 0;
-  padding: 10px;
+  padding: 8px 14px;
   border-radius: 8px ;
   cursor: pointer;
+  
 
-} */
+}
 
 /** Blog creation form **/
 
