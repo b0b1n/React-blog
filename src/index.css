@@ -170,3 +170,8 @@ text-decoration: none;}
   margin-top: 5px;
   cursor: pointer;
 }
+
+.create button:disabled{
+  background: rgb(246, 163, 163);
+  color: rgb(65, 39, 39);
+}

@@ -1,14 +1,25 @@
 import { useState } from "react";
-
 const Create = () => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [author, setAuthor] = useState("Skious");
+  const [isPending, setIsPending] = useState(false);
 
   const handleSubmit = (e) =>{
     e.preventDefault();
     const blog = {title , body , author}
-    console.log(blog);
+    setIsPending(true)
+    
+    fetch("http://localhost:8000/blogs", {
+      method : "POST",
+      headers : {"Content-type" : "application/json"},
+      body : JSON.stringify(blog)
+    }).then(()=>{
+      console.log("Just added new blog");
+      setIsPending(false)
+    }).catch((er)=>{
+      console.log("");
+    })
 
   }
 
@@ -34,7 +45,8 @@ const Create = () => {
           <option value="Sohaib">Sohaib</option>
           <option value="L'hiiba">L'hiiba</option>
         </select>
-        <button>Add blog</button>
+        {!isPending && <button>Add blog</button>}
+        {isPending && <button disabled>Adding blog ...</button>}
       </form>
     </div>
   );
