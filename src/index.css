@@ -73,6 +73,8 @@
   border: 1px solid #fafafa;
   color:#fafafa;
 }
+.blog-preview a{
+text-decoration: none;}
 /* Loading */
 #loading-container {
   margin-top: 20vh;
