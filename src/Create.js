@@ -1,27 +1,32 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 const Create = () => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [author, setAuthor] = useState("Skious");
   const [isPending, setIsPending] = useState(false);
 
-  const handleSubmit = (e) =>{
-    e.preventDefault();
-    const blog = {title , body , author}
-    setIsPending(true)
-    
-    fetch("http://localhost:8000/blogs", {
-      method : "POST",
-      headers : {"Content-type" : "application/json"},
-      body : JSON.stringify(blog)
-    }).then(()=>{
-      console.log("Just added new blog");
-      setIsPending(false)
-    }).catch((er)=>{
-      console.log("");
-    })
+  const history = useHistory();
 
-  }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const blog = { title, body, author };
+    setIsPending(true);
+
+    fetch("http://localhost:8000/blogs", {
+      method: "POST",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify(blog),
+    })
+      .then(() => {
+        console.log("Just added new blog");
+        history.push("/");
+        setIsPending(false);
+      })
+      .catch((er) => {
+        console.log("");
+      });
+  };
 
   return (
     <div className="create">
@@ -41,7 +46,7 @@ const Create = () => {
           onChange={(e) => setBody(e.target.value)}
         />
         <label>Author : </label>
-        <select value={author} onChange={(e) =>setAuthor(e.target.value)}>
+        <select value={author} onChange={(e) => setAuthor(e.target.value)}>
           <option value="Sohaib">Sohaib</option>
           <option value="L'hiiba">L'hiiba</option>
         </select>
